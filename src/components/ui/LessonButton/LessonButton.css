@@ -1,0 +1,35 @@
+/* LessonButton styles */
+.lesson-button {
+  display: block;
+  background: var(--hover);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.7rem;
+  text-decoration: none;
+  color: var(--text);
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.lesson-button:hover {
+  border-color: var(--text);
+  background: var(--bg-secondary);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.lesson-button strong {
+  color: var(--text);
+  font-weight: 600;
+  display: block;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .lesson-button {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}

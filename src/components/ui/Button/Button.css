@@ -1,0 +1,58 @@
+.btn {
+  background: var(--text);
+  color: var(--bg);
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  text-decoration: none;
+  display: inline-block;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+.btn:hover {
+  background: var(--text);
+  color: var(--bg);
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.btn:active {
+  transform: scale(1.02);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn--secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn--secondary:hover {
+  background: var(--hover);
+  color: var(--text);
+  border-color: var(--text);
+  transform: scale(1.05);
+}
+
+.btn--secondary:active {
+  transform: scale(1.02);
+}
+
+.btn--small {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+}
+
+.btn--large {
+  padding: 0.9rem 1.8rem;
+  font-size: 1rem;
+}

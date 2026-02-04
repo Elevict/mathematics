@@ -1,0 +1,29 @@
+.grid {
+  display: grid;
+}
+
+.grid--auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.grid--auto-fill {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.subjects-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1rem 1rem;
+}
+
+.chapter-links-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .chapter-links-grid {
+    grid-template-columns: 1fr;
+  }
+}

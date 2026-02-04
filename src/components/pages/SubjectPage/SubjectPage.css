@@ -1,0 +1,190 @@
+/* SubjectPage styles - matching original 11ty */
+
+/* Chapter navigation bar */
+.chapter-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2.5rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.chapter-nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.chapter-nav a:hover {
+    background: var(--hover);
+    color: var(--text);
+}
+
+/* Chapter page layout */
+.chapter-page {
+    padding: 2.5rem 0 4rem;
+    width: 100%;
+}
+
+.chapter-layout {
+    width: 100%;
+    align-items: start;
+}
+
+.chapter-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.chapter-sections {
+    flex: 1;
+    min-width: 0;
+}
+
+.chapter-sidebar {
+    min-width: 0;
+    position: sticky;
+    top: 96px;
+    align-self: start;
+    max-height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-spacer {
+    flex-shrink: 0;
+    height: 17.5rem;
+}
+
+.chapter-section .card {
+    background: var(--bg);
+    transition: none;
+}
+
+.chapter-section .card:hover {
+    background: var(--bg);
+    border-color: var(--border);
+    box-shadow: none;
+}
+
+.chapter-section {
+    margin-bottom: 1.5rem;
+    scroll-margin-top: 120px;
+}
+
+.subject-intro .markdown-renderer {
+    padding: 0;
+}
+
+.section-lessons .markdown-renderer {
+    padding: 0;
+}
+
+.lesson-markdown {
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.lesson-markdown:first-child {
+    padding-top: 0;
+    margin-top: 0;
+    border-top: 0;
+}
+
+.lesson-heading {
+    margin: 0 0 0.9rem;
+    font-size: 1.05rem;
+    font-weight: 650;
+    color: var(--text);
+    letter-spacing: -0.01em;
+}
+
+.chapter-links {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.7rem;
+}
+
+.lesson-link-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text);
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.4;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-family: inherit;
+    position: relative;
+    overflow: hidden;
+}
+
+.lesson-link-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+    transition: left 0.4s ease;
+}
+
+.lesson-link-btn:hover::before {
+    left: 100%;
+}
+
+.lesson-link-btn strong {
+    min-width: 2rem;
+    text-align: left;
+    color: var(--text);
+    font-weight: 600;
+    line-height: 1;
+    font-size: 0.85rem;
+}
+
+.lesson-link-btn:hover {
+    background: var(--hover);
+    border-color: var(--text);
+    color: var(--text);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lesson-link-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design for subject pages */
+@media (max-width: 768px) {
+    .chapter-page {
+        padding: 2rem 0 3rem;
+    }
+
+    .chapter-layout {
+        grid-template-columns: 1fr !important;
+    }
+
+    .chapter-sidebar {
+        display: none;
+    }
+    
+    .chapter-links {
+        grid-template-columns: 1fr;
+    }
+}
